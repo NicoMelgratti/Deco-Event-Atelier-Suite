@@ -1,0 +1,1 @@
+A comprehensive Full-Stack management system tailored for event decoration businesses. This application streamlines the entire workflow, from customer-facing product selection and automated budgeting to administrative order management.

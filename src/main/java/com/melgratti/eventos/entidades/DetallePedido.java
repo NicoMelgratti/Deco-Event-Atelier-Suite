@@ -2,6 +2,7 @@ package com.melgratti.eventos.entidades;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 @Data
 @Entity
@@ -12,6 +13,7 @@ public class DetallePedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @JsonBackReference
     @ManyToOne
     @JoinColumn(name = "pedido_id")
     private Pedido pedido;

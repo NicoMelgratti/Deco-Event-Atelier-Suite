@@ -5,6 +5,7 @@ import lombok.Data;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Data
 @Entity
@@ -40,6 +41,7 @@ public class Pedido {
 
     private String estado;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
     private List<DetallePedido> detalles = new ArrayList<>();
 
